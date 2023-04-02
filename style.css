@@ -1,0 +1,88 @@
+*{margin: 0; padding: 0;}
+body{
+    background: url(images/background.jpg) no-repeat;
+}
+
+.container{
+    background-color: white;
+    min-height: 100vh;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.25);
+    padding-top: 20px;
+}
+.input-area{
+    padding-bottom: 20px;
+}
+
+.input-area input{
+    transition: padding-top 0.2s ease, margin-top 0.2s ease;
+    width: 80%;
+    height: 30px;
+    border: none;
+    padding-left: 10px;
+    border: 1px solid blanchedalmond;
+}
+
+.input-button{
+    width: 30px;
+    height: 30px;
+    border: none;
+    background-color: blanchedalmond;
+    box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
+}
+
+.task-area{
+    border: 1px solid lightgray;
+}
+
+.task-tabs{
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+.task-tabs div{
+    padding: 15px;
+    cursor: pointer;
+}
+
+#under-line{
+    height: 7px;
+    background-color: pink;
+    position: absolute;
+    width: 50px;
+    left: 0px;
+    top: 48px;
+    padding: 0;
+}
+
+.task{
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-bottom: 1px solid rgb(233, 233, 233);
+}
+
+.task:last-child{
+    border-bottom: none;
+}
+
+.task button{
+    background-color:transparent;
+    border: none;
+    outline: none;
+}
+.task button:first-child{
+    margin-right: 20px;
+}
+.task button i{
+    font-size: 20px;
+}
+
+.task-done{
+    text-decoration: line-through;
+    color: rgb(123, 123, 123);
+}
+
+.task-bg-done{
+    background-color: rgb(233, 233, 233);
+}
+
