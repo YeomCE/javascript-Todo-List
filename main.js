@@ -15,6 +15,8 @@ let tabs = document.querySelectorAll(".task-tabs div");
 let taskList = [];
 let selectedMenu = "all";
 let filterList = [];
+let underLineSelect = document.getElementById("under-line");
+
 
 // + 버튼 클릭
 inputButton.addEventListener("click", addTask);
@@ -36,6 +38,8 @@ taskInput.addEventListener("keydown", function (e) {
 taskInput.addEventListener("focus", function () {
     taskInput.value = "";
 })
+
+
 
 // + 버튼 클릭
 function addTask() {
@@ -78,7 +82,7 @@ function render() {
                 `
             <div class="task task-bg-done">
                 <div class = 'task-done'>${list[i].taskContent}</div>
-                <div>
+                <div class = "icon">
                     <button onClick = "toggleComplete('${list[i].id}')"><i class="fa-solid fa-rotate-right" style="color: #7b7b7b;"></i></button>
                     <button onClick = "deleteButton('${list[i].id}')"><i class="fa-sharp fa-solid fa-trash" style="color: #ff0000;"></i></button>
                 </div>
@@ -90,7 +94,7 @@ function render() {
                 `
         <div class="task">
             <div>${list[i].taskContent}</div>
-            <div>
+            <div class = "icon">
                 <button onClick = "toggleComplete('${list[i].id}')"><i class="fa-solid fa-check" style="color: #20a730;"></i></button>
                 <button onClick = "deleteButton('${list[i].id}')"><i class="fa-sharp fa-solid fa-trash" style="color: #ff0000;"></i></button>
             </div>
@@ -127,7 +131,6 @@ function deleteButton(id) {
 function filter(event) {
     if (event) {
         selectedMenu = event.target.id;
-        let underLineSelect = document.getElementById("under-line");
 
         underLineSelect.style.width = event.target.offsetWidth + "px";
         underLineSelect.style.left = event.target.offsetLeft + "px";
