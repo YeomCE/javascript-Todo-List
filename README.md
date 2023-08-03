@@ -9,4 +9,4 @@
 반응형 웹으로 제작하여 다양한 환경 속에서도 레이아웃이나 기능 등이 망가지지 않습니다.
 
 
-<a href='yce-to-do-list.netlify.app'>페이지 바로가기</a>
+<a href='https://yce-to-do-list.netlify.app/'>페이지 바로가기</a>
